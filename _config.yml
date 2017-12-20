@@ -11,6 +11,7 @@ email: nickkrabbenhoeft@nypl.org
 description: >
   Blog for the Digital Preservation program at the New York Public Library.
 baseurl: "/digpres" # the subpath of your site, e.g. /blog
+permalink: /:year/:month/:day/:title.html
 url: "http://nypl.github.io" # the base hostname & protocol for your site
 
 twitter_username: "nypl_digpres"
