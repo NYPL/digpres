@@ -40,10 +40,10 @@ In case you had to restart Siegfried, you'll have a couple extra header lines in
 
 {% highlight bash %}
 # Delete any lines that include the header fields, after the first line
-# 1d;, skip the first line
-# / /, pattern to match
-# /d, delete lines that match the pattern
-sed '1d; /filename,filesize,modified,errors,namespace,id,format,version,mime,basis,warning/d' sf.csv > sf_clean.csv
+# 2, skip the first line
+# ${}, edit to execute
+# /.../d, delete lines that match the pattern
+sed '2,${/filename,filesize,modified,errors,namespace,id,format,version,mime,basis,warning/d}' sf.csv > sf_clean.csv
 {% endhighlight %}
 
 I'll add more tips as I cause more problems for myself.
