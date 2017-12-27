@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Troubleshooting a Siegfried Run"
-date:   2017-12-20 13:00:00 -0400
+date:   2017-12-26 13:00:00 -0400
 categories: update
 author: Nick Krabbenhoeft
 ---
