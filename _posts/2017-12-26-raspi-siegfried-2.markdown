@@ -2,7 +2,7 @@
 layout: post
 title:  "Troubleshooting a Siegfried Run"
 date:   2017-12-26 13:00:00 -0400
-categories: update
+categories: siegfried bash
 author: Nick Krabbenhoeft
 ---
 In the last post, I talked about getting Siegfried installed on a Raspberry Pi and kicking off a process to identify file formats. Easy peasy, except sometimes things don't work out perfectly. Here are a few tips on handling problems with a run.

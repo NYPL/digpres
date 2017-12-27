@@ -2,7 +2,7 @@
 layout: post
 title:  "hello, world!"
 date:   2016-06-21 11:25:44 -0400
-categories: update
+categories: site-update
 author: Nick Krabbenhoeft
 ---
 Nothing to see here. Just testing what a blog might look like. Expect posts about preserving fixity, proving trustworthiness, writing documentation, building workflows, and dealing with formats. For example:

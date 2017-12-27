@@ -2,7 +2,7 @@
 layout: post
 title:  "Starting Small with Raspberry Pi"
 date:   2017-12-20 13:00:00 -0400
-categories: update
+categories: file-formats siegfried raspberry-pi bash
 author: Nick Krabbenhoeft
 ---
 No better way to start blogging then by starting to blog. To make this less intimidating, I'll try to start small. Specifically with the $35 computer that sits on my desk.
