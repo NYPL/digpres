@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Bashing out a file format signature"
-date:   2018-01-10 10:00:00 -0400
+date:   2018-01-30 10:00:00 -0400
 categories: raspberry-pi bash file-formats
 author: Nick Krabbenhoeft
 ---
@@ -42,7 +42,6 @@ A lot of formats use a semi-unique series of bytes at the start of the file to i
 
 # xxd, prints the hexadecimal interpretation
 # defaults to 16 bytes per line
-# use -c 16 and -q to make the output interpretable
 
 > head -c 16 -q *.acs | xxd
 0000000: c3ab cdab 33cd 0300 8707 0000 93c9 0300  ....3...........
@@ -86,7 +85,7 @@ You can try cutting more or less fields, but 0xC3ABCDAB looks like the longest c
 
 It's always good to back up your work with data from other people. One potential source is the TrID format registry. In this case there is a [signature for ACS files](https://github.com/digipres/digipres.github.io/blob/master/_sources/registries/trid/triddefs_xml/ms-acs.trid.xml), and it matches our signature.
 
-In this case, there's even someone that wrote an [unofficial spec for the format](http://fileformats.lebeausoftware.org/). Remy Lebeau's work also match our signature.
+There's even someone that wrote an [unofficial spec for the format](http://fileformats.lebeausoftware.org/). Remy Lebeau's work also match our signature.
 
 ## Make and test a PRONOM signature file 
 
