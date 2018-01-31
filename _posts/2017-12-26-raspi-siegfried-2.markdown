@@ -47,6 +47,8 @@ You should be able to enter new commands agains.
 ## Restarting a run
 If the power turns off, you're working over a flakey network connection, or for any number of reasons, your Siegfried run might get interrupted. Rather than start from scratch, you can pick up from where you left off.
 
+<i>Update 2018-01-31</i> Richard Lehane helpfully pointed out a feature in Siegfried to make this simpler. Instead of concatenating the files with <code>>></code>, you can have Siegfried combine multiple result files.
+
 {% highlight bash %}
 # Find the name of the last file characterized 
 tail -1 sf.csv
@@ -59,20 +61,32 @@ grep -n 'name_of_the_file' sffiles.txt
 tail +number sffiles.txt > sffiles2.txt
 # Restart Siegfried, adding resuls to your previous output file
 # >>, add new output to the end of file instead of overwriting
-sf -csv -f sffiles2.txt >> sf.csv &
+nohup sf -csv -f sffiles2.txt > sf_2.csv &
 {% endhighlight %}
 
 Repeat as necessary.
 
 ## Clean up the output
-In case you had to restart Siegfried, you'll have a couple extra header lines in your csv. This can make it hard to import or analyze the data later, so best to clean it up now.
+In case you had to restart Siegfried, you'll have a couple result files. It's easier to handle this as one dataset. 
+
+<i>Update 2018-01-31</i> Richard Lehane pointed out a feature in Siegfried to make this simpler. Instead of concatenating the files and removing extra header lines, Siegfried can combine the files cleanly.
 
 {% highlight bash %}
+# Combine the Siegfried outputs
+sf -replay sf.csv sf_2.csv > sf_all.csv
+{% endhighlight %}
+
+Here's the strategy I used to use. It's messier, and it's probably more error prone.
+
+{% highlight bash %}
+# Combine multiple result files
+cat sf.csv sf_2.csv > sf_all.csv
+
 # Delete any lines that include the header fields, after the first line
 # 2, skip the first line
 # ${}, edit to execute
 # /.../d, delete lines that match the pattern
-sed '2,${/filename,filesize,modified,errors,namespace,id,format,version,mime,basis,warning/d}' sf.csv > sf_clean.csv
+sed '2,${/filename,filesize,modified,errors,namespace,id,format,version,mime,basis,warning/d}' sf_all.csv > sf_clean.csv
 {% endhighlight %}
 
 ## Copying data over the network
