@@ -64,7 +64,7 @@ mkdir ole
 
 ## Extract ACF and AAC files from OLE
 
-This requires some tools that can read the OLE format. Since it is the basis of the 97-2003 Office formats, there's already a very good Java library to manipulate the formats, Apache POI. Even better, Ross Spencer wrote a nice command-line tool with the Java library to extract the files.
+This requires some tools that can read the OLE format. Since it is the basis of the 97-2003 Office formats, there's already a very good Java library to manipulate the formats, [Apache POI](https://poi.apache.org/index.html). Even better, Ross Spencer wrote a [nice command-line tool](github.com/exponential-decay/ole2-re-combiner) with the Java library to extract the files.
 
 
 
