@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Bashing out another file format signature"
-date:   2018-01-30 10:00:00 -0400
+date:   2018-01-31 10:00:00 -0400
 categories: raspberry-pi bash file-formats
 author: Nick Krabbenhoeft
 ---
