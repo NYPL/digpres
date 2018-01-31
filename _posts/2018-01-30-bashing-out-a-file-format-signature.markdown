@@ -8,7 +8,7 @@ author: Nick Krabbenhoeft
 
 PRONOM is the digital preservation file format registry of choice, but it's only as good as the file format signatures that we put into it. There are already great resources about how to do this. Jenny Mitcham form the University of York included links to most resources in her blog post about [creating a signature](http://digital-archiving.blogspot.com/2016/08/my-first-file-format-signature.html) and there is a [trove OPF blogs](http://openpreservation.org/knowledge/blogs/topic/format-identification/) on the subject by Ross Spencer, Andrea Byrne, Becky McGuiness, and other.
 
-This post will be a very fast flyover of building signature for Microsoft's ACS format, aka Clippy's format.
+This post will be a very fast flyover of building signature for Microsoft's [ACS format, aka Clippy's format](https://en.wikipedia.org/wiki/Office_Assistant).
 
 ## Gather some sample data.
 
