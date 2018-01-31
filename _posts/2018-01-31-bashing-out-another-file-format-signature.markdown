@@ -6,7 +6,7 @@ categories: raspberry-pi bash file-formats
 author: Nick Krabbenhoeft
 ---
 
-In the [last post](/2018/01/30/bashing-out-a-file-format-signature.html), I used some bash tools to derive a file format signature for the ACS format used to store [Clippy](https://en.wikipedia.org/wiki/Office_Assistant). During that analysis, 32 of the files had an OLE format signature, 0xD0CF11E0A1B11AE1.
+In the [last post](/digpres/2018/01/30/bashing-out-a-file-format-signature.html), I used some bash tools to derive a file format signature for the ACS format used to store [Clippy](https://en.wikipedia.org/wiki/Office_Assistant). During that analysis, 32 of the files had an OLE format signature, 0xD0CF11E0A1B11AE1.
 
 Also known as the Compound File Binary Format, OLE was used as a structure for many different formats from software like 97-2003 Microsoft Office, SPSS, Minitab, and Caseware. It was also used to package the animations and character data used for Microsoft Agents. 
 
@@ -92,7 +92,7 @@ for file in ole/*; do jython -Dpython.path=poi-3.17/poi-3.17.jar ole2-re-combine
 
 ## Find signatures for ACF and AAC files
 
-The ole folder should be filled with subfolders now, each with the extracted ACF and AAC files. Follow the same process as the [post on the ACS files](/2018/01/30/bashing-out-a-file-format-signature.html) to analyze them for magic numbers. You can use a small tweak to peak into all the subdirectories with one command.
+The ole folder should be filled with subfolders now, each with the extracted ACF and AAC files. Follow the same process as the [post on the ACS files](/digpres/2018/01/30/bashing-out-a-file-format-signature.html) to analyze them for magic numbers. You can use a small tweak to peak into all the subdirectories with one command.
 
 {% highlight bash %}
 # Display first 16 bytes of each ACF file
