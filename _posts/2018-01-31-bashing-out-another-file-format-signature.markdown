@@ -79,9 +79,6 @@ tar -xzf poi-bin-3.17-20170915.tar.gz
 # Download Ross Spencer's OLE tool
 git clone git@github.com:exponential-decay/ole2-re-combiner.git
 
-# Create folder for extracted files
-mkdir extracted
-
 # Extract all files from the ACS files
 # jython, run jython
 # -Dpython.path=poi-3.17/poi-3.17.jar, using the POI library
