@@ -98,4 +98,4 @@ The ole folder should be filled with subfolders now, each with the extracted ACF
 > head -c 16 -q ole/*/*.acf | xxd
 {% endhighlight %}
 
-I ended up with 0x1F000100 for AAF and 0xC1ABCDAB for ACF, although I'm doing a little more research before submitting these to PRONOM.
+I ended up with 0x1F000100 and 0x1E000100 for AAF and 0xC1ABCDAB for ACF, although I'm doing a little more research before submitting these to PRONOM.
