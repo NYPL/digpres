@@ -24,7 +24,7 @@ To better understand it, think about some of the things that happens when you op
 4. It finds out the sector of the device where the first part of that file is written.
 
 The rules that create the architecture are part of the file system.
-The File Allocation Table (FAT12) file system, first published by Microsoft in 1977, is a good example to use for illustration.
+The [File Allocation Table (FAT)](https://en.wikipedia.org/wiki/File_Allocation_Table) file system, first published by Microsoft in 1977, is a good example to use for illustration.
 
 1. Each folder is defined as its own table with a row for every file or folder that is a member of that folder.
 2. The first 11 bytes of the row define the file or folder name, represented as `(8 characters).(3 characters)`.
@@ -43,12 +43,13 @@ On a device with 5 billion bytes of capacity, 11 characters for a file name is m
 FAT12 was extended to deal with some of these issues, first to FAT16 (1984) and then to FAT32 (1996).
 
 But file systems can do even more than just organize a storage device.
-They can have features like data integrity checks, on-the-fly compression, and storing metadata about the files.
+They can have features like journaling, data integrity checks, on-the-fly compression, and storing metadata about the files.
 The implementation of these features could be commercially advantageous and vendors created their own file systems to best interact with their systems.
 
-Apple has used HFS (1986), HFS+ (1998), and APFS (2017).
-Microsoft created NTFS (1993).
-In Linux, there is ext2 (1993), ext3 (2001), ext4 (2008), and btrfs (still in development).
+Apple has used [HFS](https://en.wikipedia.org/wiki/Hierarchical_File_System) (1986), [HFS+](https://en.wikipedia.org/wiki/HFS_Plus) (1998), and [APFS](https://en.wikipedia.org/wiki/Apple_File_System) (2017).
+Microsoft created [NTFS](https://en.wikipedia.org/wiki/NTFS) (1993).
+In Linux, there is [ext2](https://en.wikipedia.org/wiki/Ext2) (1993), [ext3](https://en.wikipedia.org/wiki/Ext3) (2001), [ext4](https://en.wikipedia.org/wiki/Ext4) (2008), and [btrfs](https://en.wikipedia.org/wiki/Btrfs) (still in development).
+[There are many more](https://en.wikipedia.org/wiki/Comparison_of_file_systems) if you're curious. (Thanks to Ross Spencer for this link)
 
 Take note of the relationship between operating systems and file systems.
 Every OS will best support in-house developed file systems.
@@ -56,7 +57,6 @@ Supporting others' file systems is not guaranteed.
 Windows can't read HFS+.
 macOS can read from an NTFS-formatted device, but it can't write to it.
 Linux can work with nearly everything, if someone released software to do it and you installed it.
-
 
 ## Why does this matter?
 
@@ -74,7 +74,7 @@ Isn't there a cross-platform file system?
 
 ## exFAT: The Cross-Platform Choice
 
-Microsoft released another file system in 2006, the extensible File Allocation Table (exFAT).
+Microsoft released another file system in 2006, the [extensible File Allocation Table (exFAT)](https://en.wikipedia.org/wiki/ExFAT).
 exFAT addresses FAT32's critical flaw in modern computing environments.
 The FAT table records the size of a file using 4 bytes.
 That means a storage device using FAT can only store files that are 4,294,967,295 bytes (4.29 GB) large.
@@ -88,15 +88,32 @@ That means no software installation needed.
 
 It also supports all unicode characters, meaning `视频.mov`, `ویڈیو.mov`, `this-file-name-is-really-very-long-,-probably-too-long-to-be-useful_.mov`and `📹 .mov` are all legal.
 
-What's the catch?
-Well, it doesn't have support for useful features like data integrity checks and on-the-fly compression.
-Don't use this as your day-to-day file system.
+### What's the catch?
+
+Well, exFAT doesn't have support for useful features like journaling, data integrity checks, and on-the-fly compression.
+Of these, the lack of journaling is the most important.
+File systems with [journaling](https://en.wikipedia.org/wiki/Journaling_file_system) keep track of changes in progress.
+If you're in the middle of an action like moving a folder when you unplug it or it loses power, the file system could be corrupted.
+Your computer warns you about unplugging a drive without ejecting it because of that risk.
+A journaling file system can fix the file system next time it is connected.
+exFAT can leave you high and dry.
+(Thanks to Kieran O'Leary for prompting me to learn what journaling is.)
 
 The cross-platform support also isn't perfect.
 macOS only supports exFAT drives formatted with a sector size of 128-1024 kiB.
-Either format the drive on a Mac or use be careful when choosing option during formatting on Windows and Linux.
-However, those are small catches.
+Either format the drive on a Mac or be careful when choosing options during formatting on Windows and Linux.
+
+Linux support only started in 2019 with kernel in 5.4, with better support starting in [5.7](https://arstechnica.com/information-technology/2020/03/the-exfat-filesystem-is-coming-to-linux-paragon-softwares-not-happy-about-it/) (I'm still amazed that I can plug a 100+ TB RAID into an Android phone).
+However, if you're using a Linux distro with a pre-5.4 kernel, you need to install exFAT drivers yourself.
+Most notably in our community, that includes BitCurator 2.x, which is based on Ubuntu 18.04 LTS with the 5.3 kernel. (Thanks to Kieran for this as well.)
+
+To me, those are acceptable compromises when it comes to portable hard drives used to transfer files.
+
+## exFAT is an Industry Standard
 
 If you're looking for more validation, take a look at SD cards.
 They are the last major removable media format that needs to be accessible on a variety of computers.
 The default file system for all cards larger than 32 GB is exFAT.
+
+exFAT has proved to be the most reliable solution in our work.
+It's worth evaluating in your context if you're frustrated with platform cross-compatibility.
