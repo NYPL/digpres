@@ -1,24 +1,18 @@
 # Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely need to edit after that.
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'jekyll serve'. If you change this file, please restart the server process.
 
 # Site settings
 title: NYPL Digital Preservation
-email: nickkrabbenhoeft@nypl.org
+email: digpres@nypl.org
 description: >
-  Blog for the Digital Preservation program at the New York Public Library.
+  Documentation for the Digital Preservation program at the New York Public Library.
+url: "https://nypl.github.io"
 baseurl: "/digpres" # the subpath of your site, e.g. /blog
-permalink: /:year/:month/:day/:title.html
-url: "digpres" # the base hostname & protocol for your site
 
 twitter_username: "nypl_digpres"
 
 # Build settings
 
-remote_theme: pmarsceill/just-the-docs
+remote_theme: just-the-docs/just-the-docs
 search_enabled: true
 search_tokenizer_separator: /[\s/]+/
 heading_anchors: true
