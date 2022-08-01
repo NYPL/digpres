@@ -2,6 +2,7 @@
 layout: page
 title: About the Program
 permalink: /about/
+nav_order: 1
 ---
 
 ## About Digital Preservation at NYPL
