@@ -10,8 +10,8 @@ Coming soon.
 
 ## Data Model
 
-![Born-Digital Archives Data Model]({{site.baseurl}}/assets/img/data_model_born_digital_archives.png)
+![Born-Digital Archives Data Model]({{site.baseurl}}/assets/img/svg_data_model_born_digital_archives.svg)
 
 ## Process
 
-Comming soon.
+Coming soon.
