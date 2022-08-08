@@ -7,7 +7,7 @@ parent: Access
 
 ## Request Account(s) Process
 
-1. Please fill out the “Account(s) Request Template”, include it in an email and send it to Digital Preservation at [digpres@nypl.org](digpres@nypl.org)
+1. Please copy and paste the “Account(s) Request Template” into an email and send it to Digital Preservation at [digpres@nypl.org](digpres@nypl.org)
 2. Digital Preservation will create account(s) that fit the business purpose(s).
    See “Access Types Descriptions” for their differences.
 3. Preservica utilizes Microsoft Azure Single Sign-On and requires Multi-Factor Authentication (MFA).
