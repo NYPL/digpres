@@ -1,13 +1,13 @@
 ---
 layout: page
-title: Staff Guidelines
+title: Staff Policies
 nav_order: 8
 has_children: True
 ---
 
 The following documents pertain only to staff within the Digital Preservation program.
 They amend or augment NYPL policies and guidance, such as the Employee Handbook and IT policies.
-These documents are superseded by policies and guidance from higher managing divisions, and programs with operational jurisdiction such as IT HR, and Facilities.
+These documents are superseded by policies and guidance from higher managing divisions, and programs with operational jurisdiction such as IT, HR, and Facilities.
 
 These documents follow the recommendations of [RFC 2119](https://www.rfc-editor.org/rfc/rfc2119):
 

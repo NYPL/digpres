@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Staff Guidelines
-parent: Staff
+title: Handbook Additions
+parent: Staff Policies
 nav_order: 1
 ---
 
