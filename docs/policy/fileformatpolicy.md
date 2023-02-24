@@ -1,12 +1,13 @@
 ---
 layout: page
 title: File Format Policy
-nav_order: 4
+parent: Policies
+nav_order: 3
 ---
 
 The most appropriate file format for any digital object within New York Public Library's digital collections depends on the context of its creation and acquisition.
 
-## Born-Digital
+## Files acquired digitally (Born-digital)
 
 Born-digital objects acquired by the Library should be retained in their original format.
 
@@ -15,7 +16,7 @@ The Library may re-encode these files to meet its internal digitization standard
 
 The Library may re-encode the contents of these files to new formats as needed for access purposes.
 
-## Digitized
+## Files created by digitization
 
 Files created by the Library's digitization labs or vendor digitization programs should meet the following characteristics:
 

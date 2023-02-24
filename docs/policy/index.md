@@ -2,6 +2,7 @@
 layout: page
 title: Policies
 nav_order: 0
+has_children: True
 ---
 
 The following documents pertain only to the digital collections of the New York Public Library Research Libraries.
