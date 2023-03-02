@@ -5,7 +5,7 @@ parent: Ingest
 nav_order: 1
 ---
 
-Ingests should be run from dedicated VM's to provide optimal bandwidth for file transfers and uploads.
+Ingests should be run from dedicated VMs to provide optimal bandwidth for file transfers and uploads.
 VMs might be dedicated to a specific kind of ingest, such as born-digital archives or digitized audio and moving image.
 Additional VMs may be necessary to paralellize the workflow and increase bandwidth utilization or to support a new ingest process.
 All VMs should be configured the same when possible.
