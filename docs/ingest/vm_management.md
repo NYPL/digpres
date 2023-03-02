@@ -6,9 +6,9 @@ nav_order: 1
 ---
 
 Ingests should be run from dedicated VM's to provide optimal bandwidth for file transfers and uploads.
-VM's might be dedicated to a specific kind of ingest, such as born-digital archives or digitized audio and moving image.
-Additional VM's may be necessary to paralellize the workflow and increase bandwidth utilization or to support a new ingest process.
-All VM's should be configured the same when possible.
+VMs might be dedicated to a specific kind of ingest, such as born-digital archives or digitized audio and moving image.
+Additional VMs may be necessary to paralellize the workflow and increase bandwidth utilization or to support a new ingest process.
+All VMs should be configured the same when possible.
 
 ## Create a New Virtual Machine
 
