@@ -53,4 +53,67 @@ the Born-Digital Archives, including the data classification and its relationshi
 
 ## Process
 
-Coming soon.
+The Born-Digital Archives Ingest Process documents how Digital Preservation (DP) staff move
+Born-Digital Archives packages from temporary storage locations to the Library’s digital
+repository hosted on Preservica. A Born-Digital Archives package is the package arranged
+by the archivist after they have processed the collection. More information on the
+Processing steps can be found on [Digital Archives documentation website](https://nypl.github.io/digarch/staging/processing.html).
+
+### Step-by-step instructions
+
+1. Locate packages
+
+   * Choose a collection to work with
+   * Create a Trello ticket to log the work
+
+2. Validate and update packages
+
+    Normally, a linter is a static program that catches errors, bugs and flags potential problems 
+    in the source code. In our context, [lint_er.py](https://github.com/NYPL/prsv-tools/blob/main/bin/lint_er.py)
+    is a Python script that confirms each Electronic Record (ER) package conforms to the structure 
+    expected by the packaging and ingest processes.
+
+   * Log in to a virtual machine (VM)
+   * Run the linter on all of the packages from the collection.
+
+        ```sh
+        python3 lint_er.py -... /source/digarch/path/to/collection ...
+        ```
+
+   * After the linting process, go through the log file
+     * Fix each package that has error(s) individually
+     * If a repair can be carried out, do so
+     * If further help is needed contact other Digital Preservation or Digital Archives staff
+     * Common issues found and what we perform on them
+   * Continue linting the packages until all packages pass
+
+3. Repackage and ingest
+
+    Packages that conform to the data model structure are ready to be ingested into Preservica.
+    First, they must be repackaged according to Preservica's expectations.
+
+    * Log in to a VM
+    * Copy found packages to the `/data` folder on the VM
+
+        ```sh
+        rsync --checksum /path/to/source /data
+        ```
+
+    * Run the packaging script on the copied folders
+
+        ```sh
+        python3 preservica_package_ingest_script.py - …
+        ```
+
+    * Change the ownership of the files
+
+        ```sh
+        chmod ___TBD___
+        ```
+
+    * Monitor the ingest progress on the Preservica user interface
+
+### Confirm ingest
+
+* TBD ingest confirmation check
+* Delete the original packages from the Isilon data source
