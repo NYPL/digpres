@@ -5,10 +5,10 @@ parent: Ingest
 nav_order: 1
 ---
 
-Ingests should be run from dedicated VMs to provide optimal bandwidth for file transfers and uploads.
+Ingests should be run from dedicated virtual machines (VMs) to provide optimal bandwidth for file transfers and uploads.
 VMs might be dedicated to a specific kind of ingest, such as born-digital archives or digitized audio and moving image.
 Additional VMs may be necessary to paralellize the workflow and increase bandwidth utilization or to support a new ingest process.
-All VMs should be configured the same when possible.
+All VMs are managed by the Information Technology Group (ITG) and should be configured the same when possible.
 
 ## Create a New Virtual Machine
 
@@ -46,7 +46,7 @@ Include the following:
    * `-m` create a home directory
    * `-s /bin/bash` set shell
    * `-G ingest` set secondary group to ingest
-1. Send the login information to the user.
+2. Send the login information to the user.
 Ask them to test the connection and also change the password.
 
 ### Delete user accounts
@@ -89,8 +89,8 @@ All storage mounts should be made into one of the following directories:
 
 * `/source/` for read-only mounts to data source locations
 * `/data/` for read/write mounts to working storage for the script
-* `/test_preservica/` for mounts to the upload/storage/download directories for the Preservica test instance
-* `/preservica/` for mounts to the upload/storage/download directories for the Preservica production instance
+* `/ifs/preservica/development` for mounts to the upload/storage/download directories for the Preservica test instance
+* `/ifs/preservica/production ` for mounts to the upload/storage/download directories for the Preservica production instance
 
 1. Create a directory for mounting and change its ownership to the ingest group.
 
