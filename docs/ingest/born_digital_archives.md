@@ -68,7 +68,7 @@ repository hosted on Preservica. A Born-Digital Archives package is the package 
 by the archivist after they have processed the collection. More information on the
 Processing steps can be found on [Digital Archives documentation website](https://nypl.github.io/digarch/staging/processing.html).
 
-### Step-by-step instructions
+### Step-by-step ingest instructions
 
 1. Locate packages
 
@@ -122,7 +122,7 @@ Processing steps can be found on [Digital Archives documentation website](https:
 
     5. Monitor the ingest progress on the Preservica user interface
 
-### Confirm ingest
+### Step-by-step ingest confirmation instructions
 
 1. TBD ingest confirmation check
 2. Delete the original packages from the Isilon data source
