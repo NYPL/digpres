@@ -4,6 +4,15 @@ title: Born-Digital Archives
 parent: Ingest
 ---
 
+# Born-Digital Archives
+
+{: .no_toc }
+&nbsp;
+{: .no_toc .text-delta }
+
+1. TOC
+{:toc}
+
 ## Package Requirements
 
 A Born-Digital Archives package must conform to the folder and file structure shown in the General Born-Digital Archives Package.
