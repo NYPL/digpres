@@ -15,7 +15,7 @@ the account audit process is conducted, documented and managed.
 Digital Preservation Program uses comma-separated values (CSV) files to manage user accounts.  
 They are stored on the internal departmental NYPL Google Drive.
 
-### Preservica user interface accounts audit instructions
+## Preservica user interface accounts audit instructions
 
 1. Log in to nypl.preservica.com
 2. Hover on to the “Administration” tab and click the option “Manage Accounts”
@@ -28,7 +28,7 @@ They are stored on the internal departmental NYPL Google Drive.
 6. After reviewing the full list of user accounts, use the (user_accounts_api.py) to generate the CSV file
 7. Add the CSV file to the departmental Google Drive
 
-### Virtual machine accounts audit instructions
+## Virtual machine accounts audit instructions
 
 There are three virtual machines that we use for Preservica. Below steps are to be run  
 on each individual machine.
