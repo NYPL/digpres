@@ -122,7 +122,6 @@ Processing steps can be found on [Digital Archives documentation website](https:
 
     5. Monitor the ingest progress on the Preservica user interface
 
-### Step-by-step ingest confirmation instructions
+### Ingest confirmation
 
-1. TBD ingest confirmation check
-2. Delete the original packages from the Isilon data source
+Confirm packages are ingested correctly on the Preservica website.
