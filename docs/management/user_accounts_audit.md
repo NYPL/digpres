@@ -25,8 +25,6 @@ They are stored on the internal departmental NYPL Google Drive.
    2. If it is a contractor, check with user accounts manager in the Information Technology Group (ITG) if the person still works for the Library
    3. If it is a service account, check documented usage for the account, and see if the entity who is responsible for its use still needs it
 5. If the account is no longer active, use “Delete User” to remove them from Preservica
-6. After reviewing the full list of user accounts, use the (user_accounts_api.py) to generate the CSV file
-7. Add the CSV file to the departmental Google Drive
 
 ## Virtual machine accounts audit instructions
 
