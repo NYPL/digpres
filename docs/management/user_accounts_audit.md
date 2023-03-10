@@ -12,8 +12,8 @@ the account audit process is conducted, documented and managed.
 
 ## User account management
 
-Digital Preservation Program uses comma-separated values (CSV) files to manage user accounts.  
-They are stored on the internal departmental NYPL Google Drive.
+Digital Preservation Program creates seasonal user accounts audit files which are stored  
+in their internal digital storage.
 
 ## Preservica user interface accounts audit instructions
 
