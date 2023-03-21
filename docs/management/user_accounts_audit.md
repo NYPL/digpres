@@ -33,30 +33,40 @@ on each individual machine.
 
 1. Log in to the virtual machine (VM)
 2. List all users
+
     ```sh
     getent passwd {1000..60000}
     ```
+
 3. Go through the list of users one by one
 4. Confirm if the account holder is still active
    1. If it is an NYPL employee account, use Workday to check if they still work at the Library
    2. If it is a contractor, check with user accounts manager in the Information Technology Group (ITG) whether the person still works for the Library
    3. If it is a service account, check documented usage for the account, and see if the entity still needs it
 5. If the account is no longer active, delete the account
+
     ```sh
     sudo userdel username
     ```
+
 6. After checking all user accounts, we need to check group access. First, find all groups in the VM
+
     ```sh
     sudo cat /etc/group
     ```
+
 7. For groups that are created to grant users different access, review who are in those groups.
    As an example, check the "ingest" group with this code:
+
     ```sh
     getent group ingest
     ```
+
 8. Review individual users listed in the group, and confirm they are still in the library and need this group access.
 9. If they no longer need to be in this group, remove their group membership. As an example, below code removes user, bjohnson, from ingest group, and does NOT remove the user account.
+
     ```sh
     sudo gpasswd -d bjohnson ingest
     ```
+
 10. Create a record for all VM individual and group accounts for this VM and store the file in digital storage
