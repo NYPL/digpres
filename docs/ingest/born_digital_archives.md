@@ -75,7 +75,18 @@ Processing steps can be found on [Digital Archives documentation website](https:
     1. Choose a collection to work with
     2. Create a Trello ticket to log the work
 
-2. Validate and update packages
+2. Upload the collection to the source folder with rsync
+
+    ```sh
+    rsync -arP /source/to/collection/folder/* target/ingest/source/folder
+    ```
+
+    Argument explanation:
+    * a is archive mode
+    * r is recursive
+    * P is progress
+
+3. Validate and update packages
 
     Normally, a linter is a static program that catches errors, bugs and flags potential problems
     in the source code. In our context, [lint_er.py](https://github.com/NYPL/prsv-tools/blob/main/bin/lint_er.py)
@@ -96,7 +107,7 @@ Processing steps can be found on [Digital Archives documentation website](https:
        4. Document common issues found and what we perform on them
     4. Continue linting the packages until all packages pass
 
-3. Repackage and ingest
+4. Repackage and ingest
 
     Packages that conform to the data model structure are ready to be ingested into Preservica.
     First, they must be repackaged according to Preservica's expectations.
