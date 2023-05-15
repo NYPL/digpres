@@ -126,16 +126,16 @@ Processing steps can be found on [Digital Archives documentation website](https:
         ```
 
     4. Follow the instructions to create pre-ingest containers for all packages
-       1. Select 1 to ingest content to PRODUCTION tenant or select 2 to ingest content to TEST tenant
-       2. Clear the process list? Choose "N"
-       3. Select the process you would like to run. Select 1 to Create New Container
-       4. Select the workflow type. Enter 1 for DigArch
+       1. Select `1` to ingest content to PRODUCTION tenant or select `2` to ingest content to TEST tenant
+       2. Clear the process list? Choose `N`
+       3. Select the process you would like to run. Select `1` to Create New Container
+       4. Select the workflow type. Enter `1` for DigArch
 
     5. After all containers are created, ingest all packages to the instance of choosing
-       1. Select 1 to ingest content to PRODUCTION tenant or select 2 to ingest content to TEST tenant
-       2. Clear the process list? Choose "N"
-       3. Select the process you would like to run. Select 2 to Ingest Container
-       4. Enter ALL to upload all packages, unless for other purposes, specify which container to ingest
+       1. Select `1` to ingest content to PRODUCTION tenant or select `2` to ingest content to TEST tenant
+       2. Clear the process list? Choose `N`
+       3. Select the process you would like to run. Select `2` to Ingest Container
+       4. Enter `ALL` to upload all packages, unless for other purposes, specify which container to ingest
 
     6. Monitor the ingest progress on the Preservica user interface
 
