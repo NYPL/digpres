@@ -78,7 +78,7 @@ Processing steps can be found on [Digital Archives documentation website](https:
 2. Upload the collection to the source folder with rsync
 
     ```sh
-    rsync -arP /source/to/collection/folder/* target/ingest/source/folder
+    rsync -arP /source/folder/* DA_Source/folder
     ```
 
     Argument explanation:
