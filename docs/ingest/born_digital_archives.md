@@ -75,7 +75,18 @@ Processing steps can be found on [Digital Archives documentation website](https:
     1. Choose a collection to work with
     2. Create a Trello ticket to log the work
 
-2. Validate and update packages
+2. Upload the collection to the source folder with rsync
+
+    ```sh
+    rsync -arP /source/folder/* DA_Source/folder
+    ```
+
+    Argument explanation:
+    * a is archive mode
+    * r is recursive
+    * P is progress
+
+3. Validate and update packages
 
     Normally, a linter is a static program that catches errors, bugs and flags potential problems
     in the source code. In our context, [lint_er.py](https://github.com/NYPL/prsv-tools/blob/main/bin/lint_er.py)
@@ -96,21 +107,38 @@ Processing steps can be found on [Digital Archives documentation website](https:
        4. Document common issues found and what we perform on them
     4. Continue linting the packages until all packages pass
 
-3. Repackage and ingest
+4. Repackage and ingest
 
     Packages that conform to the data model structure are ready to be ingested into Preservica.
     First, they must be repackaged according to Preservica's expectations.
 
     1. Log in to a VM
-    2. Copy found packages to the `/data` folder on the VM using rsync with checksum argument
-    3. Run the packaging script on the copied folders
+    2. Switch user to preservica
 
         ```sh
-        python3 preservica_package_ingest_script.py - …
+        su preservica
         ```
 
-    4. Change the ownership of the files with chmod
-    5. Monitor the ingest progress on the Preservica user interface
+    3. Change directory to `DA_Scripts`, which has a pyenv environment for Python version control
+    4. Run the packaging script
+
+        ```sh
+        python3 DigArch_NYPL_Uploader.py
+        ```
+
+    5. Follow the instructions to create pre-ingest containers for all packages
+       1. Select `1` to ingest content to PRODUCTION tenant or select `2` to ingest content to TEST tenant
+       2. Clear the process list? Choose `N`
+       3. Select the process you would like to run. Select `1` to Create New Container
+       4. Select the workflow type. Enter `1` for DigArch
+
+    6. After all containers are created, ingest all packages to the instance of choosing
+       1. Select `1` to ingest content to PRODUCTION tenant or select `2` to ingest content to TEST tenant
+       2. Clear the process list? Choose `N`
+       3. Select the process you would like to run. Select `2` to Ingest Container
+       4. Enter `ALL` to upload all packages, unless for other purposes, specify which container to ingest
+
+    7. Monitor the ingest progress on the Preservica user interface
 
 ### Ingest confirmation
 
