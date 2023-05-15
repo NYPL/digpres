@@ -113,15 +113,14 @@ Processing steps can be found on [Digital Archives documentation website](https:
     First, they must be repackaged according to Preservica's expectations.
 
     1. Log in to a VM
-    2. Copy found packages to the `/data` folder on the VM using rsync with checksum argument
-    3. Run the packaging script on the copied folders
+    2. Run the packaging script on the folder that has packages that have been run by lint_er.py
 
         ```sh
         python3 preservica_package_ingest_script.py - …
         ```
 
-    4. Change the ownership of the files with chmod
-    5. Monitor the ingest progress on the Preservica user interface
+    3. Change the ownership of the files with chmod
+    4. Monitor the ingest progress on the Preservica user interface
 
 ### Ingest confirmation
 
