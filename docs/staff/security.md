@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Security Policies
-parent: Staff Policies
+parent: Staff Guidelines
 nav_order: 2
 ---
 
@@ -41,7 +41,7 @@ All shared code repositories must be stored on the NYPL Github account and must 
 Shared code repositories must use the following access profiles by default:
 
 * read access: public
-* write access: restricted to the Digital Preservation eam and additional users, as needed
+* write access: restricted to the Digital Preservation team and additional users, as needed
 * admin access: restricted to staff on the program of primary developers/users
 
 All shared code respositories must require review before approval and merging of pull requests.
