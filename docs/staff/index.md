@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Staff Policies
+title: Staff Guidelines
 nav_order: 8
 has_children: True
 ---
