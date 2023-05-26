@@ -7,11 +7,11 @@ nav_order: 1
 
 ## Expansions on Handbook Items
 
-### [209 Social Media](https://lair.nypl.org/-/departments/internal-affairs/human-resources/employee-handbook#h.vx1227)
+### 209 Social Media
 
 Staff must not post identifiable information or photographs of collection objects that are not available to the public.
 
-### [407 Professional Development](https://lair.nypl.org/-/departments/internal-affairs/human-resources/employee-handbook#h.8j9hmusa0fjn)
+### 407 Professional Development
 
 Staff may use up to 154 hours per year on professional development, skills related to their job but not directly related to a current task. Staff must provide their supervisors with a written plan for each fiscal year for usage of this time. This plan must clearly outline dates, times, topics, and objectives for any planned or regularly scheduled usage. Staff professional development plans are subject to supervisor approval and staff may be asked to provide more documentation or adjust based on department needs or timelines.
 
@@ -53,7 +53,7 @@ Supervisors should offer staff options on how to share their resignation/retirem
 * Email announcement by staff
 * Email announcement and a get-together with colleagues
 
-### [501 Annual Leave](https://lair.nypl.org/-/departments/internal-affairs/human-resources/employee-handbook#h.keundycu1rvh)
+### 501 Annual Leave
 
 Staff must notify their supervisor of Annual Leave (AL) plans via email.
 If possible, staff should give advance notice of AL (1 week).
@@ -82,7 +82,7 @@ While on AL, staff are not expected to check or respond to email.
 Out-of-office auto-responses should state when staff will return to work and an alternate staff to contact.
 Supervisory staff must establish a channel, ideally not email, to be notified of emergencies or urgent situations.
 
-### [502 Sick Leave (Healthcare Leave)](https://lair.nypl.org/-/departments/internal-affairs/human-resources/employee-handbook#h.chpi6fiqe2c8)
+### 502 Sick Leave (Healthcare Leave)
 
 Staff should take Sick Leave (SL) for their own health and for the health of their colleagues.
 Staff medical information is private.
@@ -108,7 +108,7 @@ The Library allows staff to use up to 40 hours of accrued SL for Parental Leave.
 
 SL does not expire and accrues over time.
 
-### [606 Telecommuting (Work from Home)](https://lair.nypl.org/-/departments/internal-affairs/human-resources/employee-handbook#h.t4qidfchpls5)
+### 606 Telecommuting (Work from Home)
 
 Staff must establish the expectations for a telecommuting arrangement with their supervisors before submitting plans to Human Resources.
 These include the days of the week which will be used for telecommuting and the types of work which will be performed.
