@@ -44,7 +44,7 @@ Shared code repositories must use the following access profiles by default:
 * write access: restricted to the Digital Preservation team and additional users, as needed
 * admin access: restricted to staff on the program of primary developers/users
 
-All shared code respositories must require review before approval and merging of pull requests.
+All shared code repositories must require review before approval and merging of pull requests.
 
 ## Audit
 
