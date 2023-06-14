@@ -159,9 +159,9 @@ All staff may request to learn the salary and compensation ranges of consenting 
 
 ### Inclement Weather
 
-Announcements of inclement weather by NYPL HR and/or the National Weather Service trigger preparations for extended periods of time when staff may be unable to access the office.
+Announcements of inclement weather conditions by NYPL HR, the National Weather Service, and/or the Environmental Protection Agency trigger preparations for extended periods of time when staff may be unable to access the office.
 
-When NYPL HR or the NWS has issued a warning, staff should complete the following preparations:
+For an NYPL HR announcement, NWS warning, or EPA AQI forecast over 100 or 150 depending on their sensitivity to air quality, staff should complete the following preparations:
 
 * Take home laptops and any other equipment needed for work from home
 * Request work from home from their supervisor
@@ -169,12 +169,13 @@ When NYPL HR or the NWS has issued a warning, staff should complete the followin
 * Check the location of collection emergency response supplies
 
 Supervisors should consider proactively announcing work from home for the duration of the warning.
-Supervisor announcements should be made before 5 PM the day before, or as soon as possible if the NWS announcement is made after 5 PM.
+Supervisor announcements should be made before 5 PM the day before, or as soon as possible otherwise.
 
-When the NWS has issued a watch/advisory, staff should complete all the preparations associated with a warning.
+For an NWS watch/advisory or EPA AQI forecast over 150 or 200 depending on their sensitivity to air quality, staff should complete all the preparations associated with a warning.
 Staff do not need to request work from home for the duration of the watch/advisory but should inform their supervisor.
 
-When staff do not have equipment to telecommute due to sudden inclement weather, they must work with their supervisors to identify offline work from home tasks.
+Staff should maintain enough Library-provided computing equipment at home to continue to work from home regardless of when the office is closed due to inclement weather.
+When staff do not have equipment to telecommute due to sudden inclement weather, they will be requested to join meetings with their personal equipment and must work with their supervisors to identify offline work from home tasks.
 
 ### Work Day Expectations
 
