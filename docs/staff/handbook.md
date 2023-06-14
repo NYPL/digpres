@@ -7,26 +7,11 @@ nav_order: 1
 
 ## Expansions on Handbook Items
 
-### 209 Social Media
+### 304 Social Media
 
 Staff must not post identifiable information or photographs of collection objects that are not available to the public.
 
-### 407 Professional Development
-
-Staff may use up to 154 hours per year on professional development, skills related to their job but not directly related to a current task. Staff must provide their supervisors with a written plan for each fiscal year for usage of this time. This plan must clearly outline dates, times, topics, and objectives for any planned or regularly scheduled usage. Staff professional development plans are subject to supervisor approval and staff may be asked to provide more documentation or adjust based on department needs or timelines.
-
-Uses of professional development include, but are not limited to:
-
-* One-off webinars / workshops
-* Self-directed learning on a specific topic
-* Long term courses which do not interfere with work schedules or deadlines
-
-Staff may use this time remotely or on-site.
-Staff must request in advance (and include in their written plan) if they must use more than one full work day for professional development within a 2 week period.
-
-Staff must indicate when they are using professional development time with a public event on their calendar.
-
-### [415 Resignations and Retirements](https://lair.nypl.org/-/departments/internal-affairs/human-resources/employee-handbook#h.y6b3q2atnxzf)
+### 503 Resignations and Retirements
 
 Staff should give at least 2 weeks of notice before leaving the Library’s employment.
 Staff must submit a Letter of Resignation/Retirement that states their intended final date of employment.
@@ -53,7 +38,7 @@ Supervisors should offer staff options on how to share their resignation/retirem
 * Email announcement by staff
 * Email announcement and a get-together with colleagues
 
-### 501 Annual Leave
+### 901 Annual Leave
 
 Staff must notify their supervisor of Annual Leave (AL) plans via email.
 If possible, staff should give advance notice of AL (1 week).
@@ -82,7 +67,7 @@ While on AL, staff are not expected to check or respond to email.
 Out-of-office auto-responses should state when staff will return to work and an alternate staff to contact.
 Supervisory staff must establish a channel, ideally not email, to be notified of emergencies or urgent situations.
 
-### 502 Sick Leave (Healthcare Leave)
+### 1001 Sick Leave (Healthcare Leave)
 
 Staff should take Sick Leave (SL) for their own health and for the health of their colleagues.
 Staff medical information is private.
@@ -108,7 +93,7 @@ The Library allows staff to use up to 40 hours of accrued SL for Parental Leave.
 
 SL does not expire and accrues over time.
 
-### 606 Telecommuting (Work from Home)
+### 606 Hybrid Work (Telecommuting / Work from Home)
 
 Staff must establish the expectations for a telecommuting arrangement with their supervisors before submitting plans to Human Resources.
 These include the days of the week which will be used for telecommuting and the types of work which will be performed.
@@ -134,6 +119,21 @@ When possible, supervisors should proactively arrange work from home during incl
 See the section on [Inclement Weather](#Inclement Weather) for more detail.
 
 ## Additional Guidelines
+
+### Professional Development
+
+Staff may use up to 154 hours per year on professional development, skills related to their job but not directly related to a current task. Staff must provide their supervisors with a written plan for each fiscal year for usage of this time. This plan must clearly outline dates, times, topics, and objectives for any planned or regularly scheduled usage. Staff professional development plans are subject to supervisor approval and staff may be asked to provide more documentation or adjust based on department needs or timelines.
+
+Uses of professional development include, but are not limited to:
+
+* One-off webinars / workshops
+* Self-directed learning on a specific topic
+* Long term courses which do not interfere with work schedules or deadlines
+
+Staff may use this time remotely or on-site.
+Staff must request in advance (and include in their written plan) if they must use more than one full work day for professional development within a 2 week period.
+
+Staff must indicate when they are using professional development time with a public event on their calendar.
 
 ### Annual Reviews and Goal Setting
 
