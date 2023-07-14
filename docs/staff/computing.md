@@ -47,4 +47,5 @@ All staff are issued with the following equipment:
 
 Staff may request specific equipment or additional equipment as needed.
 
-Staff must not use personal equipment for word, except for email, web conferences, and administrative work.
+Staff must not use personal equipment for work.
+In cases where they are unable to access work-provided laptops, they may use personal equipment for email, web conferences, and administrative work.
