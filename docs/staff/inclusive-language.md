@@ -10,7 +10,7 @@ The Digital Preservation program works to remove that language by referring dire
 
 The following is a list of biased language and suggested alternate terms.
 This list is incomplete.
-Additional harmful language should be documented when its identified.
+Additional harmful language should be documented when it is identified.
 The listed preferred terms are not the only possible alternates.
 Other alternate terms may be used.
 
