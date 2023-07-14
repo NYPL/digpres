@@ -16,7 +16,7 @@ Other alternate terms may be used.
 
 | Harmful | Preferred |
 | ------- | --------- |
-| male/female (cabling) | plug/port, plug/socket | Allowlist |
+| male/female (cabling) | plug/port, plug/socket |
 | master/slave (database, device, etc) | primary/backup, primary/secondary |
 | master branch | main branch |
 | preservation/edit/etc master file | preservation/edit/etc file |
