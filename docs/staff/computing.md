@@ -14,7 +14,7 @@ Most staff tend to use macOS.
 ## Software
 
 Staff must be familiar with command-line and graphical user interfaces.
-Staff may use whatever software the prefer for daily work.
+Staff may use whatever software they prefer for daily work.
 The following tools are recommended for consistency when collaborating:
 
 * Visual Studio Code for development
