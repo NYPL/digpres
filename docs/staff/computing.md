@@ -21,6 +21,7 @@ The following tools are recommended for consistency when collaborating:
 * git for version control
 * zsh for a shell
 * pyenv and pyenv-virtualenv for python version management
+* pytest for test-driven development
 
 When bringing a new computer online, staff should use the [Digital Archives install script](https://github.com/NYPL/digarch_scripts/blob/main/digiarch-software-script) to install most common tools.
 
