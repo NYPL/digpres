@@ -70,12 +70,19 @@ Processing steps can be found on [Digital Archives documentation website](https:
 
 ### Step-by-step ingest instructions
 
-1. Locate packages
+1. Confirm with Digital Archives team what collections are ready for ingest
+
+2. Locate packages
 
     1. Choose a collection to work with
     2. Create a Trello ticket to log the work
+    3. Use compare_paths.py to confirm the copies on Isilon and DigArchDiskStation
+       are the same
+       ```sh
+        python3 compare_paths.py --directory_one isilon/path --directory_two diskstation/path
+        ```
 
-2. Upload the collection to the source folder with rsync
+3. Upload the collection to the source folder with rsync
 
     ```sh
     rsync -arP /source/folder/* DA_Source/folder
@@ -86,7 +93,7 @@ Processing steps can be found on [Digital Archives documentation website](https:
     * r is recursive
     * P is progress
 
-3. Validate and update packages
+4. Validate and update packages
 
     Normally, a linter is a static program that catches errors, bugs and flags potential problems
     in the source code. In our context, [lint_er.py](https://github.com/NYPL/prsv-tools/blob/main/bin/lint_er.py)
@@ -107,7 +114,7 @@ Processing steps can be found on [Digital Archives documentation website](https:
        4. Document common issues found and what we perform on them
     4. Continue linting the packages until all packages pass
 
-4. Repackage and ingest
+5. Repackage and ingest
 
     Packages that conform to the data model structure are ready to be ingested into Preservica.
     First, they must be repackaged according to Preservica's expectations.
