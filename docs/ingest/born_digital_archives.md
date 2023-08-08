@@ -72,20 +72,23 @@ Processing steps can be found on [Digital Archives documentation website](https:
 
 1. Confirm with Digital Archives team what collections are ready for ingest
 
-2. Locate packages
+2. Locate packages in two locations: Isilon and DigArchDiskStation
 
     1. Choose a collection to work with
     2. Create a Trello ticket to log the work
     3. Use compare_paths.py to confirm the copies on Isilon and DigArchDiskStation
        are the same
-       ```sh
+
+        ```sh
         python3 compare_paths.py --directory_one isilon/path --directory_two diskstation/path
         ```
 
-3. Upload the collection to the source folder with rsync
+3. Log in to a virtual machine (VM)
+
+4. Upload the collection to the VM "incoming" folder with rsync
 
     ```sh
-    rsync -arP /source/folder/* DA_Source/folder
+    rsync -arP /source/folder/* DA_Incoming/folder
     ```
 
     Argument explanation:
@@ -93,28 +96,32 @@ Processing steps can be found on [Digital Archives documentation website](https:
     * r is recursive
     * P is progress
 
-4. Validate and update packages
+5. Validate and update packages
 
     Normally, a linter is a static program that catches errors, bugs and flags potential problems
     in the source code. In our context, [lint_er.py](https://github.com/NYPL/prsv-tools/blob/main/bin/lint_er.py)
     is a Python script that confirms each Electronic Record (ER) package conforms to the structure
     expected by the packaging and ingest processes.
 
-    1. Log in to a virtual machine (VM)
-    2. Run the linter on all of the packages from the collection.
+    1. While in the VM, run the linter on all of the packages from the collection.
 
         ```sh
         python3 lint_er.py -... /source/digarch/path/to/collection ...
         ```
 
-    3. After the linting process, go through the log file
+    2. After the linting process, go through the log file
        1. Fix each package that has error(s) individually
-       2. If a repair can be carried out, do so
+       2. If a repair can be carried out, do so. For example, use [flatten_er_metadata_folder.py](https://github.com/NYPL/prsv-tools/blob/main/bin/flatten_er_metadata_folder.py) to restructure the metadata folder
        3. If further help is needed, contact other Digital Preservation or Digital Archives staff
        4. Document common issues found and what we perform on them
-    4. Continue linting the packages until all packages pass
+    3. Continue linting the packages until all packages pass
+    4. Move valid packages to DA_Source folder under the DigArch folder hierarchy
 
-5. Repackage and ingest
+        ```sh
+        mv DA_Incoming/folder/* DA_Source/DigArch/
+        ```
+
+6. Repackage and ingest
 
     Packages that conform to the data model structure are ready to be ingested into Preservica.
     First, they must be repackaged according to Preservica's expectations.
