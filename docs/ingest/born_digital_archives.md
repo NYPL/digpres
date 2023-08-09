@@ -85,10 +85,12 @@ Processing steps can be found on [Digital Archives documentation website](https:
 
 3. Log in to a virtual machine (VM)
 
-4. Upload the collection to the VM "incoming" folder with rsync
+4. Create a folder within the "DA_Incoming" with the collection ID as its folder name
+
+5. Upload the collection to the folder that you just created, using rsync
 
     ```sh
-    rsync -arP /source/folder/* DA_Incoming/folder
+    rsync -arP /source/folder/collectionID/folder/ DA_Incoming/collectionID/folder
     ```
 
     Argument explanation:
@@ -96,7 +98,7 @@ Processing steps can be found on [Digital Archives documentation website](https:
     * r is recursive
     * P is progress
 
-5. Validate and update packages
+6. Validate and update packages
 
     Normally, a linter is a static program that catches errors, bugs and flags potential problems
     in the source code. In our context, [lint_er.py](https://github.com/NYPL/prsv-tools/blob/main/bin/lint_er.py)
@@ -121,7 +123,7 @@ Processing steps can be found on [Digital Archives documentation website](https:
         mv DA_Incoming/folder/* DA_Source/DigArch/
         ```
 
-6. Repackage and ingest
+7. Repackage and ingest
 
     Packages that conform to the data model structure are ready to be ingested into Preservica.
     First, they must be repackaged according to Preservica's expectations.
