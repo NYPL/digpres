@@ -136,7 +136,8 @@ Processing steps can be found on [Digital Archives documentation website](https:
         su preservica
         ```
 
-    3. Change directory to `DA_Scripts`, which has a pyenv environment for Python version control
+    3. Change directory to `DA_Scripts`
+
     4. Run the packaging script
 
         ```sh
