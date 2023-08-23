@@ -161,3 +161,13 @@ Processing steps can be found on [Digital Archives documentation website](https:
 ### Ingest confirmation
 
 Confirm packages are ingested correctly on the Preservica website.
+
+### Clear out working area
+
+Once the collection is ingested correctly, the working folders need to be cleaned up
+before the next ingest.
+
+1. `rm -r isilon/path/opex_DigArch/Container_*`
+2. `rm -r vm/path/DA_Source/DigArch/M*`
+3. `rm -r vm/path/DA_Target/Container_M*`
+4. `rm -r vm/path/DA_Incoming/*`
