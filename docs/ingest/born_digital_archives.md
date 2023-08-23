@@ -102,7 +102,7 @@ Processing steps can be found on [Digital Archives documentation website](https:
 6. Validate and update packages
 
     Normally, a linter is a static program that catches errors, bugs and flags potential problems
-    in the source code. In our context, [lint_er.py](https://github.com/NYPL/prsv-tools/blob/main/bin/lint_er.py)
+    in the source code. In our context, [lint_er.py](https://github.com/NYPL/prsv-tools/blob/main/src/prsv_tools/ingest/lint_er.py)
     is a Python script that confirms each Electronic Record (ER) package conforms to the structure
     expected by the packaging and ingest processes.
 
@@ -114,7 +114,7 @@ Processing steps can be found on [Digital Archives documentation website](https:
 
     2. After the linting process, go through the log file
        1. Fix each package that has error(s) individually
-       2. If a repair can be carried out, do so. For example, use [flatten_er_metadata_folder.py](https://github.com/NYPL/prsv-tools/blob/main/bin/flatten_er_metadata_folder.py) to restructure the metadata folder
+       2. If a repair can be carried out, do so. For example, use [flatten_er_metadata_folder.py](https://github.com/NYPL/prsv-tools/blob/main/src/prsv_tools/ingest/flatten_er_metadata_folder.py) to restructure the metadata folder
        3. If further help is needed, contact other Digital Preservation or Digital Archives staff
        4. Document common issues found and what we perform on them
     3. Continue linting the packages until all packages pass
