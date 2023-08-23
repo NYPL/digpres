@@ -70,9 +70,7 @@ Processing steps can be found on [Digital Archives documentation website](https:
 
 ### Step-by-step ingest instructions
 
-1. Confirm with Digital Archives team what collections are ready for ingest
-
-2. Locate packages in two locations: Isilon and DigArchDiskStation
+1. Locate packages in two locations: Isilon and DigArchDiskStation
 
     1. Choose a collection to work with
     2. Create a Trello ticket to log the work
@@ -82,6 +80,9 @@ Processing steps can be found on [Digital Archives documentation website](https:
         ```sh
         python3 compare_paths.py --directory_one isilon/path --directory_two diskstation/path
         ```
+
+2. Confirm with Digital Archives (DA) team what collections are ready for ingest. If there are
+   issues about the collections, discuss them with DA team.
 
 3. Log in to a virtual machine (VM)
 
