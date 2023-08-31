@@ -70,15 +70,28 @@ Processing steps can be found on [Digital Archives documentation website](https:
 
 ### Step-by-step ingest instructions
 
-1. Locate packages
+1. Locate packages in two locations: Isilon and DigArchDiskStation
 
     1. Choose a collection to work with
     2. Create a Trello ticket to log the work
+    3. Use compare_paths.py to confirm the copies on Isilon and DigArchDiskStation
+       are the same
 
-2. Upload the collection to the source folder with rsync
+        ```sh
+        python3 compare_paths.py --directory_one isilon/path --directory_two diskstation/path
+        ```
+
+2. Confirm with Digital Archives (DA) team what collections are ready for ingest. If there are
+   issues about the collections, discuss them with DA team.
+
+3. Log in to a virtual machine (VM)
+
+4. Create a folder within the "DA_Incoming" with the collection ID as its folder name
+
+5. Upload the collection to the folder that you just created, using rsync
 
     ```sh
-    rsync -arP /source/folder/* DA_Source/folder
+    rsync -arP /source/folder/collectionID/folder/ DA_Incoming/collectionID/folder
     ```
 
     Argument explanation:
@@ -86,28 +99,32 @@ Processing steps can be found on [Digital Archives documentation website](https:
     * r is recursive
     * P is progress
 
-3. Validate and update packages
+6. Validate and update packages
 
     Normally, a linter is a static program that catches errors, bugs and flags potential problems
-    in the source code. In our context, [lint_er.py](https://github.com/NYPL/prsv-tools/blob/main/bin/lint_er.py)
+    in the source code. In our context, [lint_er.py](https://github.com/NYPL/prsv-tools/blob/main/src/prsv_tools/ingest/lint_er.py)
     is a Python script that confirms each Electronic Record (ER) package conforms to the structure
     expected by the packaging and ingest processes.
 
-    1. Log in to a virtual machine (VM)
-    2. Run the linter on all of the packages from the collection.
+    1. While in the VM, run the linter on all of the packages from the collection.
 
         ```sh
         python3 lint_er.py -... /source/digarch/path/to/collection ...
         ```
 
-    3. After the linting process, go through the log file
+    2. After the linting process, go through the log file
        1. Fix each package that has error(s) individually
-       2. If a repair can be carried out, do so
+       2. If a repair can be carried out, do so. For example, use [flatten_er_metadata_folder.py](https://github.com/NYPL/prsv-tools/blob/main/src/prsv_tools/ingest/flatten_er_metadata_folder.py) to restructure the metadata folder
        3. If further help is needed, contact other Digital Preservation or Digital Archives staff
        4. Document common issues found and what we perform on them
-    4. Continue linting the packages until all packages pass
+    3. Continue linting the packages until all packages pass
+    4. Move valid packages to DA_Source folder under the DigArch folder hierarchy
 
-4. Repackage and ingest
+        ```sh
+        mv DA_Incoming/folder/* DA_Source/DigArch/
+        ```
+
+7. Repackage and ingest
 
     Packages that conform to the data model structure are ready to be ingested into Preservica.
     First, they must be repackaged according to Preservica's expectations.
@@ -119,7 +136,8 @@ Processing steps can be found on [Digital Archives documentation website](https:
         su preservica
         ```
 
-    3. Change directory to `DA_Scripts`, which has a pyenv environment for Python version control
+    3. Change directory to `DA_Scripts`
+
     4. Run the packaging script
 
         ```sh
@@ -143,3 +161,13 @@ Processing steps can be found on [Digital Archives documentation website](https:
 ### Ingest confirmation
 
 Confirm packages are ingested correctly on the Preservica website.
+
+### Clear out working area
+
+Once the collection is ingested correctly, the working folders need to be cleaned up
+before the next ingest.
+
+1. `rm -r isilon/path/opex_DigArch/Container_*`
+2. `rm -r vm/path/DA_Source/DigArch/M*`
+3. `rm -r vm/path/DA_Target/Container_M*`
+4. `rm -r vm/path/DA_Incoming/*`
