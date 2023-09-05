@@ -51,7 +51,7 @@ Born-Digital Archives content contains different types of components, including 
 and file transfers. This data model is created based on FA component packages, and describes how the package will be structured after ingested
 into Preservica.
 
-Each component forms a Structural Object (SO), named as "DI/EM/ER Container", which can be understood as a folder. DI stands for Digital Image;
+Each component forms a Structural Object (SO), named as "DI/EM/ER Container", which can be understood as a folder. DI stands for Disk Image;
 EM stands for Email; and ER stands for Electronic Record. DI/EM/ER Container must have one metadata SO, named "(original folder title)_metadata",
  and one contents SO, "(original folder title)_contents". Within the metadata SO, there may not have any file, or it may have metadata file(s).
  Within the contents SO, there can be Information Object(s) (IO), also known as asset(s), and/or file and folder hierarchy, depending on the original
