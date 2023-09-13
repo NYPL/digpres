@@ -17,8 +17,8 @@ grand_parent: Ingest
 
 ## Processed Archives: Finding Aid Component packages from Forensic Toolkit
 
-Processed Archives packages are packages that are arranged and approved by the Archival Processing Unit.
-Subsequently, They are exported by the Digital Archives team from the Forensic Toolkit (FTK) software.
+Processed Archives packages are packages of files created by the Archival Processing Unit using either Forensic Toolkit (FTK) or a file manager.
+Subsequently, they are exported by the Digital Archives team.
 They are also known as Finding Aid Component (FA component) packages. More information on the Processing
 steps can be found on [Digital Archives documentation website](https://nypl.github.io/digarch/staging/processing.html).
 The following diagram shows how this type of package may look like.
