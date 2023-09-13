@@ -31,4 +31,3 @@ folders, namely, a "metadata" folder and an "objects" folder. Within the metadat
 Both the metadata and submissionDocumentation folders may or may not have any files. When there are files in the metadata folder, it could
 include CSV files, Digital Forensics XML files, or any other types of metadata relevant to the object(s). In the "objects" folder, it may
 have more files and folders structures, depending on what types of content it is, and its original arrangement.
-
