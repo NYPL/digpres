@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Pre-processed Archives
-nav_order: 1
+nav_order: 0
 parent: Born-Digital Archives
 grand_parent: Ingest
 ---
