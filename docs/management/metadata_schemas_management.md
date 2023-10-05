@@ -58,5 +58,10 @@ fit the Custom Indexer schema.
 
 ## Schemas management instructions
 
+Digital Preservation program has developed a Python script, [get_schemas.py](https://github.com/NYPL/prsv-tools/blob/main/src/prsv_tools/manage/get_schemas.py),
+to download all three types of metadata schema documents from Preservica. The script utilizes
 [Preservica's Application Programming Interface](https://nypl.preservica.com/api/documentation.html)
-(API)
+(API) to receive data.
+
+After getting the documents, DP staff uploads them into a private GitHub repository. This process will
+be run every three months.
