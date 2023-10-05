@@ -63,5 +63,5 @@ to download all three types of metadata schema documents from Preservica. The sc
 [Preservica's Application Programming Interface](https://nypl.preservica.com/api/documentation.html)
 (API) to receive data.
 
-After getting the documents, DP staff uploads them into a private GitHub repository. This process will
-be run every three months.
+After getting the documents, DP staff uploads them into a private GitHub repository. This process is
+ run every three months.
