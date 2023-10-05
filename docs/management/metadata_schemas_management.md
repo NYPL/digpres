@@ -56,7 +56,7 @@ Preservica User Interface to add blocks of additional metadata to an entity (fol
 Indexer documents are used to define a custom search indexer for generic metadata. They should
 fit the Custom Indexer schema.
 
-## Preservica metadata schemas management instructions
+## Schemas management instructions
 
 [Preservica's Application Programming Interface](https://nypl.preservica.com/api/documentation.html)
 (API)
