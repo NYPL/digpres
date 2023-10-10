@@ -2,7 +2,7 @@
 layout: page
 title: Contact
 permalink: /contact/
-nav_order: 10
+nav_order: 7
 ---
 
 Get in touch with the Digital Preservation Program regarding our work at NYPL and suggestions for improvement on work published here.

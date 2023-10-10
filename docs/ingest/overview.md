@@ -2,7 +2,7 @@
 layout: page
 title: Ingest
 has_children: True
-nav_order: 4
+nav_order: 3
 ---
 
 The following pages describe the ingest processes for each workflow that feeds collections to Preservica. The workflows include:
