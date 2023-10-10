@@ -1,0 +1,27 @@
+---
+layout: default
+title: Home
+exclude: True
+---
+
+<h2>NYPL Digital Preservation Program</h2>
+
+<p>This site documents:
+  <ul>
+    <li>the policies of the New York Public Library Digital Preservation Program</li>
+    <li>the usage of Preservica as the Library's digital repository</li>
+    <li>blog posts about work currently happening within the program</li>
+  </ul>
+</p>
+
+<h2>Recent Posts</h2>
+
+{% for post in site.posts limit:3 %}
+  <h3 class="post-list-header">
+    <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+  </h3>
+  <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+  {{ post.content | strip_html | truncatewords:25}}
+{% endfor %}
+
+<p class="rss-subscribe">subscribe <a href="{{ "/posts/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
