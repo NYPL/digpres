@@ -27,8 +27,6 @@ into the digital repository software, Preservica.
 
 
 
-![alt text]({{site.baseurl}}/assets/img/svg_data_model_born_digital_archives.svg "Diagram using the Unified Modeling Language showing the Data Model of
-the Born-Digital Archives, including the data classification and its relationships, folder names, metadata fragments, security tags")
 
 ## Process
 
