@@ -3,6 +3,7 @@ layout: page
 title: Born-Digital Archives
 has_children: True
 parent: Ingest
+nav_order: 2
 ---
 
 # Born-Digital Archives
