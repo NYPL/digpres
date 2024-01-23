@@ -62,13 +62,10 @@ filename encoding issues and filename having characters unaccepted by Preservica
   In two collections, our program discovered files with hidden characters, `\x7f`, in their filenames.
   After some research, we found out `\x7f` means `DEL`, delete in ASCII characters.
 
-* Filename having characters unaccepted by Preservica
+* Filename having characters unaccepted by Preservica: in some cases, filenames have characters that
+  Preservica does not accept. This is because Preservica uses XML to store and transact metadata, and
+  XML does not accept some characters, including `&`, `<`, `>`, `"`, `'`.
 
-1. How to find out if there is any issue(s) of the collection ingest process?
-   1. Exception log created by the ingest script: files that are not included in the package for ingest
-   2. Log file created by the ingest script: all processes
-   3. Preservica User Interface (UI): Ingest Monitor
-2. How to figure out what exactly is the issue from?
 
 Virus
 Encoding
