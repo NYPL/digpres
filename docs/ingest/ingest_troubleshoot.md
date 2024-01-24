@@ -16,7 +16,7 @@ nav_order: 10
 
 Ingesting content into Preservica encounters issues from time to time.
 Digital Preservation program uses below methods to understand the cause and
-resolve them prior to ingest.
+resolve them.
 
 ## How are issues spotted?
 
@@ -75,6 +75,6 @@ of the filename or during the virus checking step.
   Preservica does not accept. This is because Preservica uses XML to store and transact metadata, and
   XML does not accept some characters, including `&`, `<`, `>`, `"`, `'`.
 
-* Virus detected in the file: Preservica scans for computer virus with ClamAV before ingesting the
-  package. Therefore, if there is any virus detected in one or more files in one package, the package
-  will not be ingested, and the ingest workflow will be halted.
+* Virus detected in the file: Preservica scans for computer virus with ClamAV, an open source antivirus
+  software, before ingesting the package. Therefore, if there is any virus detected in one or more
+  files in one package, the package will not be ingested, and the ingest workflow will be halted.
