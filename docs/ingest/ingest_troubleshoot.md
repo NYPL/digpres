@@ -37,16 +37,25 @@ There are a couple of ways that we check if the ingest process encounters any bl
 
 ## How we figure out what the issues stem from?
 
-For files listed in the "Exception log", we review them individually. Preservica is
+For files listed in the "Exception log", we review them individually. These exceptions
+are defined in the ingest script, and they catch files with unexpected extensions and
+incorrect file naming conventions. For instance, our program expects the Born Digital
+Archives metadata file to be a comma-separated values or tab-separated values file.
+Therefore, the expected extensions are .CSV or .TSV. If a metadata file that has a
+different file extension is found in the package, it will not be included in ingest
+package, and will be listed in the Exception log.
+
+For unsuccessful ingest workflows, they can result from various reasons. Preservica is
 format-agnostic, meaning it does not restrict ingested content by its file format.
 It also does not read into file content much, except for generating checksum and
 virus check. However, Preservica reads filenames and uses them to create assets metadata.
-Therefore, issues of files from the "Exception log" are most likely from filenames, such as
-filename encoding issues and filename having characters unaccepted by Preservica.
+Therefore, when there are unsuccessful ingest processes, they usually result from issues
+of the filename or during the virus checking step.
 
 * Filename encoding issues: for filename encoding issues, we use the command line software,
   xxd, to investigate any hidden characters in the filename. For instance, to see the filename's
-  hex value of a file called, "digital_preservation.docx", we can use this command in the terminal:
+  hex value of a file called, "digital_preservation.docx", we can use this command
+  in the terminal:
 
     ```sh
     echo digital_preservation.docx | xxd
@@ -66,6 +75,6 @@ filename encoding issues and filename having characters unaccepted by Preservica
   Preservica does not accept. This is because Preservica uses XML to store and transact metadata, and
   XML does not accept some characters, including `&`, `<`, `>`, `"`, `'`.
 
-
-Virus
-Encoding
+* Virus detected in the file: Preservica scans for computer virus with ClamAV before ingesting the
+  package. Therefore, if there is any virus detected in one or more files in one package, the package
+  will not be ingested, and the ingest workflow will be halted.
