@@ -41,15 +41,44 @@ some issues, such as filename encoding errors.
 
 How we navigate what the actual causes are will be introduced in the next section.
 
-## How we figure out what the issues stem from?
+## Specific issues and how we resolve them
+
+### Files with unexpected extensions or incorrect file naming conventions
 
 For files listed in the "Exception log", we review them individually. These exceptions
-are defined in the ingest script, and they catch files with unexpected extensions and
-incorrect file naming conventions. For instance, our program expects the Born Digital
-Archives metadata file to be a comma-separated values or tab-separated values file.
-Therefore, the expected extensions are .CSV or .TSV. If a metadata file that has a
-different file extension is found in the package, it will not be included in ingest
-package, and will be listed in the Exception log.
+are defined in the ingest script. Specifically, they catch files with unexpected
+extensions and incorrect file naming conventions.
+
+#### Example 1
+
+Our program expects the Born Digital Archives metadata file to
+be a comma-separated values or tab-separated values file, which has .CSV and .TSV
+extensions respectively.
+
+In some instances, we found metadata files that are plaintext files, with the .TXT
+extension. In this case, our program reviews the files individually with Digital
+Archives program and decides what the solution should be. The most common reason of
+having a plaintext metadata file results from incorrect selection of the export file
+type when the archivist exports the metadata file.
+
+> In this context, the content of the file is the same. Therefore, our program
+> migrates the data from plaintext format to the .CSV format.
+
+#### Example 2
+
+Our program expects specific naming conventions for some folders and files. For Born
+Digital Archives, the package folder name should confirm to the regular expression,
+`M[0-9]+_(ER|DI|EM)_[0-9]+`, where `ER` means Electronic Records; `DI` means Disk
+Images; and `EM` means Email. A valid example is `M1126_ER_1`
+
+In one collection, we found packages named as `M1234_ER1`, `M1234_ER2`, etc. When
+similar cases show up, our program also reviews these packages with the Digital
+Archives program to decide what the solution should be.
+
+> This issue usually comes from human errors, where other structures are correct,
+> and only the folder names need to be updated. Therefore, after the review process
+> with Digital Archives staff, we update the folder names to `M1234_ER_1` and
+> `M1234_ER_2`.
 
 For unsuccessful ingest workflows, they can result from various reasons. Preservica is
 format-agnostic, meaning it does not restrict ingested content by its file format.
