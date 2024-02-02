@@ -95,13 +95,10 @@ hex value of a file called, "digital_preservation.docx", we can use this command
 in the terminal:
 
   ```sh
-    echo digital_preservation.docx | xxd
+    ls -1 path/to/file | xxd
   ```
 
-  * echo is a unix/linux command line tool that displays lines of texts or strings that are
-    passed as argument
-
-This command prints out the hex data of the filename. Hex is short for hexadecimal. Hexadecimal
+This command prints out the hex data of the file path. Hex is short for hexadecimal. Hexadecimal
 data represents binary data using the base 16 number system, and it allows us to see the filename
 in a more granular level, including hidden characters.
 In two collections, our program discovered files with hidden characters, `\x7f`, in their filenames.
@@ -113,8 +110,37 @@ in some cases, filenames have characters that
 Preservica does not accept. This is because Preservica uses XML to store and transact metadata, and
 XML does not accept some characters, including `&`, `<`, `>`, `"`, `'`.
 
+#### Example 1
+
+In our ingest process, we encounter filenames that have `&` very often.
+
+> solution to be added.
+
 ### Virus detected in the file
 
 Preservica scans for computer virus with ClamAV, an open source antivirus
 software, before ingesting the package. Therefore, if there is any virus detected in one or more
 files in one package, the package will not be ingested, and the ingest workflow will be halted.
+
+#### Example 1
+
+In one collection, we found a Windows Trojan virus named "Win.Trojan.Cap-1" in
+ClamAV's virus registry. After some research using the Internet Archive,
+we found that this computer virus, "CAP", was most likely a Microsoft Word Macro virus.
+[This Internet Archive capture](https://web.archive.org/web/20130729073004/http://vxheaven.org/29a/29a-2/29a-2.5_6)
+ and [the Virus Encyclopedia](http://virus.wikidot.com/cap)
+give us information most relevant to this virus. Quoting from the Virus Encyclopedia of the behavior of this virus:
+> When an infected file is opened,
+> CAP removes the macros in NORMAL.DOT and replaces them with its own.
+> It removes the options of Macros and Customize under the Tools drop menu,
+> as well as Templates under file. If there is an icon on the toolbar,
+> it will still be there, but it will not function.
+> When the macros are decrypted, the following text can be seen:
+> 'C.A.P: Un virus social.. y ahora digital..
+> '"j4cKy Qw3rTy" (jqw3rty@hotmail.com).
+> 'Venezuela, Maracay, Dic 1996.
+> 'P.D. Que haces gochito ? Nunca seras Simon Bolivar.. Bolsa !
+
+* A macro virus is a virus written in macro, a programming language for automating
+  repeated tasks.
+
