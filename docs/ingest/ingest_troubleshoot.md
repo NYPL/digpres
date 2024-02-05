@@ -129,7 +129,20 @@ ClamAV's virus registry. After some research using the Internet Archive,
 we found that this computer virus, "CAP", was most likely a Microsoft Word Macro virus.
 [This Internet Archive capture](https://web.archive.org/web/20130729073004/http://vxheaven.org/29a/29a-2/29a-2.5_6)
  and [the Virus Encyclopedia](http://virus.wikidot.com/cap)
-give us information most relevant to this virus. Quoting from the Virus Encyclopedia of the behavior of this virus:
+give us information most relevant to this virus.
+
+A macro, in computer programming, is a rule, pattern, or sequence of events
+that allows users to automate repetitive tasks. In the context of Microsoft Office
+Suites, the user can create macros to record a set of actions that they want to
+run as many times as they'd like.
+
+A macro virus is written in the same language as the macro of the software.
+In the CAP virus' context, it was written in Visual Basic for Applications.
+And it impacts ten macros in Microsoft Word, as documented in
+[the Virus Encyclopedia](http://virus.wikidot.com/cap), including FileOpen,
+AutoClose, FileSave, FileSaveAs, and so on.
+
+Quoting from the Virus Encyclopedia of the behavior of this virus:
 > When an infected file is opened,
 > CAP removes the macros in NORMAL.DOT and replaces them with its own.
 > It removes the options of Macros and Customize under the Tools drop menu,
@@ -140,7 +153,6 @@ give us information most relevant to this virus. Quoting from the Virus Encyclop
 > '"j4cKy Qw3rTy" (jqw3rty@hotmail.com).
 > 'Venezuela, Maracay, Dic 1996.
 > 'P.D. Que haces gochito ? Nunca seras Simon Bolivar.. Bolsa !
-
-* A macro virus is a virus written in macro, a programming language for automating
-  repeated tasks.
-
+> This translates into: "'C.A.P: A social virus, and now a digital one.
+> (The next two lines are about the creator and the time and location of the virus's
+> creation.) PS, What are you doing little cowboy? You will never be Simon Bolivar! Stupid!
