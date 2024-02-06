@@ -122,13 +122,21 @@ Preservica scans for computer virus with ClamAV, an open source antivirus
 software, before ingesting the package. Therefore, if there is any virus detected in one or more
 files in one package, the package will not be ingested, and the ingest workflow will be halted.
 
+After the workflow is halted, our program will do research on the specific computer
+virus to understand its effects on modern computer environments and assess the risks.
+Our program will make decisions on whether to ingest the files, depending on the research.
+In some cases, if the impacts of the computer virus do not extend to the modern computers
+and software, our program would ingest the file into the repository. If the risks still
+exist, our program would remove the infested file from the package before the ingest.
+
 #### Example 1
 
 In one collection, we found a Windows Trojan virus named "Win.Trojan.Cap-1" in
 ClamAV's virus registry. After some research using the Internet Archive,
 we found that this computer virus, "CAP", was most likely a Microsoft Word Macro virus.
-[This Internet Archive capture](https://web.archive.org/web/20130729073004/http://vxheaven.org/29a/29a-2/29a-2.5_6)
- and [the Virus Encyclopedia](http://virus.wikidot.com/cap)
+[This Microsoft Security Intelligence page](https://www.microsoft.com/en-us/wdsi/threats/malware-encyclopedia-description?name=Virus%3AWM%2FCap.A),
+[this Internet Archive capture](https://web.archive.org/web/20130729073004/http://vxheaven.org/29a/29a-2/29a-2.5_6)
+, [the Virus Encyclopedia](http://virus.wikidot.com/cap) and [F-Secure](https://www.f-secure.com/v-descs/cap.shtml)
 give us information most relevant to this virus.
 
 A macro, in computer programming, is a rule, pattern, or sequence of events
