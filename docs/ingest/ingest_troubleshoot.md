@@ -144,10 +144,15 @@ the virus warning to continue ingest in Preservica:
 1. log into [Preservica website](https://nypl.preservica.com/)
 2. click Ingest > Manage
 3. click "Workflow Error Configuration" for the ingest workflow context
-4. click Ingest > Monitor
-5. find the package that needs to be re-ingested
-6. click the menu icon on the top right of the box. It appears as three vertical dots.
-7. click "Resubmit" and the workflow will run again
+4. scroll to the step that says "The Virus Check step found a virus in the package"
+5. on the status drop-down menu, it should show "Abort workflow". Change it
+   to "Continue workflow"
+6. click Ingest > Monitor
+7. find the package that needs to be re-ingested
+8. click the menu icon on the top right of the box. It appears as three vertical dots.
+9. click "Resubmit" and the workflow will run again
+10. after the package is ingested, go back to step 2. to 4.
+11. on the status drop-down menu, change it back to "Abort workflow"
 
 #### Example 1
 
