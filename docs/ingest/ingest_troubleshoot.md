@@ -125,12 +125,6 @@ in some cases, filenames have characters that
 Preservica does not accept. This is because Preservica uses XML to store and transact metadata, and
 XML does not accept some characters, including `&`, `<`, `>`, `"`, `'`.
 
-#### Example 1
-
-In our ingest process, we encounter filenames that have `&` very often.
-
-> solution to be added.
-
 ### Virus detected in the file
 
 Preservica scans for computer virus with ClamAV, an open source antivirus
