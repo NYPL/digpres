@@ -154,7 +154,7 @@ the virus warning to continue ingest in Preservica:
 10. after the package is ingested, go back to step 2. to 4.
 11. on the status drop-down menu, change it back to "Abort workflow"
 
-#### Example 1
+#### Example
 
 In one collection, we found a Windows Trojan virus named "Win.Trojan.Cap-1" in
 ClamAV's virus registry. After some research using the Internet Archive,
