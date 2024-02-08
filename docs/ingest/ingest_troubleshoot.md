@@ -138,6 +138,17 @@ In some cases, if the impacts of the computer virus do not extend to the modern 
 and software, our program would ingest the file into the repository. If the risks still
 exist, our program would remove the infested file from the package before the ingest.
 
+After the research and deciding the computer virus risks are low. Our program turns off
+the virus warning to continue ingest in Preservica:
+
+1. log into [Preservica website](https://nypl.preservica.com/)
+2. click Ingest > Manage
+3. click "Workflow Error Configuration" for the ingest workflow context
+4. click Ingest > Monitor
+5. find the package that needs to be re-ingested
+6. click the menu icon on the top right of the box. It appears as three vertical dots.
+7. click "Resubmit" and the workflow will run again
+
 #### Example 1
 
 In one collection, we found a Windows Trojan virus named "Win.Trojan.Cap-1" in
