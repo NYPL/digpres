@@ -189,3 +189,15 @@ Quoting from the Virus Encyclopedia of the behavior of this virus:
 > This translates into: "'C.A.P: A social virus, and now a digital one.
 > (The next two lines are about the creator and the time and location of the virus's
 > creation.) PS, What are you doing little cowboy? You will never be Simon Bolivar! Stupid!
+
+In this case, our program decided to ingest files with this virus and other historical Microsoft macro virus from the 90's because of a couple of reasons. Over the years,
+Microsoft has done many interventions about these viruses. One change from 2022 is that
+[macros from the internet are blocked by default in Microsoft office](https://learn.microsoft.com/en-gb/DeployOffice/security/internet-macros-blocked).
+Microsoft also added more warnings before the use can enable the macro
+(see [25 years on, Microsoft makes another stab at stopping macro malware](https://grahamcluley.com/microsoft-stab-macro-viruses/))
+
+On top of the intervention from Microsoft, NYPL's processes for accessing
+these Microsoft Word documents will not rely on the original computer
+environments, but focus on creating digital surrogates for users to
+safely use the assets. With these considerations, we made the decisions to
+ingest the files.
