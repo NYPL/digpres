@@ -39,6 +39,21 @@ On the same page, there is a section that lists all the messages, "Info", "Warni
 "Error". Successful workflows can sometimes include "warning" and "error" messages for
 some issues, such as filename encoding errors.
 
+To further check the details of ingest status, follow below steps:
+
+1. log into [Preservica website](https://nypl.preservica.com/)
+2. click Ingest > Completed
+3. Set up the Filter to show workflows created by "All Users",
+   date range you check for and check "All Workflow Instances"
+4. if any workflow is in orange or red texts, they need to be reviewed
+5. to review what step went wrong, click into the "Workflow Context" field
+6. check if any "State" field does not have a green check mark
+7. click into "List all child workflows" to see if there is any workflow
+   context that has issues, which would be in red texts
+8. click into the "Workflow Context" for the child workflow that has red texts,
+   and the "Step Progress" table will show us what step was blocking the
+   ingest progress, such as "Virus Check"
+
 How we navigate what the actual causes are will be introduced in the next section.
 
 ## Specific issues and how we resolve them
