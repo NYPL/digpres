@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Receival
+title: Receipt
 has_children: True
 nav_order: 3
 ---

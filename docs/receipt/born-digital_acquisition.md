@@ -1,11 +1,11 @@
 ---
 layout: page
-title: Born-Digital Archives Receival
+title: Born-Digital Archives Receipt
 nav_order: 0
-parent: Receival
+parent: Receipt
 ---
 
-# Born-Digital Archives Receival
+# Born-Digital Archives Receipt
 
 {: .no_toc }
 &nbsp;
