@@ -28,7 +28,7 @@ visit [Digital Archives website](https://nypl.github.io/digarch/).
 3. Once the copy process is successful, Digital Archive program will mark
    completion on their Trello board, DigArch Project Queue.
 4. Digital Archives staff will email the Digital Repository staff at
-   digpres@nypl.org that this collection is ready to be received at ICA and
+   <digpres@nypl.org> that this collection is ready to be received at ICA and
    ingested into Preservica.
 5. Digital Repository program creates a new card on their Trello board,
    Digital Repository Collections Ingest.
