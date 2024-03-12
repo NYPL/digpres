@@ -24,7 +24,7 @@ visit [Digital Archives website](https://nypl.github.io/digarch/).
 1. Digital Archives program packages the collection.
 2. Once the packaging is complete, Digital Archives program will copy the
    collection packages onto the Isilon cluster A (ICA), a storage system we use
-   at the NYPL.
+   at NYPL.
 3. Once the copy process is successful, Digital Archive program will mark
    completion on their Trello board, DigArch Project Queue.
 4. Digital Archives staff will email the Digital Repository staff at
